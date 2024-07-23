@@ -1,10 +1,10 @@
 const apiUrl = "https://dev.pulsoid.net/api/v1/data/heart_rate/latest";
 
-async function fetchHeartRate() {
+async function fetchHeartRate(apiKey) {
     try {
         const response = await fetch(apiUrl, {
             headers: {
-                'Authorization': `Bearer ${process.env.API_KEY}`,
+                'Authorization': `Bearer ${apiKey}`,
                 'Content-Type': 'application/json'
             }
         });
