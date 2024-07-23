@@ -1,6 +1,7 @@
 function checkPassword() {
     const enteredPassword = document.getElementById("password").value;
-    if (enteredPassword === process.env.ACCESS_PASSWORD) {
+    const correctPassword = process.env.ACCESS_PASSWORD;
+    if (enteredPassword === correctPassword) {
         document.getElementById("passwordPrompt").style.display = "none";
         document.getElementById("content").style.display = "block";
         initChart();
