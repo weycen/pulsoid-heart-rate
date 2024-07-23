@@ -1,4 +1,3 @@
-const fetch = require('node-fetch');
 const config = require('./api/config');
 
 module.exports = async (req, res) => {
