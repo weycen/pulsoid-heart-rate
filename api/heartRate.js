@@ -1,11 +1,10 @@
-const config = require('./api/config');
 
 module.exports = async (req, res) => {
     const apiUrl = "https://dev.pulsoid.net/api/v1/data/heart_rate/latest";
     try {
         const response = await fetch(apiUrl, {
             headers: {
-                'Authorization': `Bearer ${config.apiKey}`,
+                'Authorization': `Bearer ${process.env.API_KEY}`,
                 'Content-Type': 'application/json'
             }
         });
