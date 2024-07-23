@@ -16,6 +16,7 @@ async function checkPassword() {
         document.getElementById("content").style.display = "block";
         initChart();
         setInterval(updateHeartRate, 1000);
+        handleResize();
     } else {
         alert("Incorrect password. Please try again.");
     }
@@ -28,6 +29,14 @@ async function updateHeartRate() {
         updateChart(rate);
     }
 }
+
+function handleResize() {
+    if (chart) {
+        chart.resize();
+    }
+}
+
+window.addEventListener('resize', handleResize);
 
 // 初始化时获取配置
 getConfig();

@@ -14,9 +14,13 @@
             <button onclick="checkPassword()">Submit</button>
         </div>
         <div id="content" style="display: none;">
-            <h1>Heart Rate Monitor</h1>
-            <div id="heartRate">-- bpm</div>
-            <canvas id="heartRateChart"></canvas>
+            <div id="heartRateContainer">
+                <h1>Heart Rate Monitor</h1>
+                <div id="heartRate">-- bpm</div>
+            </div>
+            <div id="chartContainer">
+                <canvas id="heartRateChart"></canvas>
+            </div>
         </div>
     </div>
     <script src="scripts/api.js"></script>
