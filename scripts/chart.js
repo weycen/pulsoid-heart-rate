@@ -44,6 +44,3 @@ function updateChart(newValue) {
     chart.data.datasets[0].data.shift();
     chart.update();
 }
-
-// 确保在 DOM 加载完成后初始化图表
-document.addEventListener('DOMContentLoaded', initChart);
