@@ -1,0 +1,6 @@
+{
+    "env": {
+        "ACCESS_PASSWORD": "@access_password",
+        "API_KEY": "@api_key"
+    }
+}
