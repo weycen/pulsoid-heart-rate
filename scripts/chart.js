@@ -13,7 +13,9 @@ function initChart() {
                 data: initialData,
                 borderColor: 'rgb(75, 192, 192)',
                 tension: 0.1,
-                fill: false
+                fill: false,
+                pointRadius: 0,  // 设置点的半径为0，即不显示点
+                pointHoverRadius: 0,  // 鼠标悬停时也不显示点
             }]
         },
         options: {
@@ -22,11 +24,16 @@ function initChart() {
             scales: {
                 x: {
                     type: 'category',
-                    labels: Array(maxDataPoints).fill('')
+                    labels: Array(maxDataPoints).fill(''),
+                    reverse: false,  // 从右到左显示
+                    grid: {
+                        drawBorder: false,
+                        display: false,  // 去掉 x 轴线
+                    },
                 },
                 y: {
                     beginAtZero: false,
-                    suggestedMin: 30,
+                    suggestedMin: 40,
                     suggestedMax: 200
                 }
             },
