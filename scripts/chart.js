@@ -30,6 +30,11 @@ function initChart() {
                         drawBorder: false,
                         display: false,  // 去掉 x 轴线
                     },
+                    ticks: {
+                        maxTicksLimit: 5,
+                        maxRotation: 0,
+                        minRotation: 0
+                    }
                 },
                 y: {
                     beginAtZero: false,

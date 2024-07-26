@@ -40,3 +40,11 @@ window.addEventListener('resize', handleResize);
 
 // 初始化时获取配置
 getConfig();
+
+// 添加触摸事件支持
+document.addEventListener('touchstart', function(e) {
+    if (e.target.tagName === 'BUTTON') {
+        e.preventDefault();
+        e.target.click();
+    }
+}, false);
